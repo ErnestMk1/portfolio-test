@@ -1,0 +1,34 @@
+.mainDiv {
+  color: #FFF;
+}
+
+.post_input {
+  resize: none;
+  margin-bottom: 2vh;
+  padding: 12px;
+}
+
+.sendPost {
+  min-width: 15vh;
+  min-height: 5vh;
+  align-self: center;
+  cursor: pointer;
+  margin-bottom: -2vh;
+  background-color: #FFF;
+  border: none;
+  border-radius: 15px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  transition: transform .2s;
+}
+
+.sendPost:hover {
+  transform: scale(1.2);
+}
+
+.input_div {
+  display: flex;
+  flex-direction: column;
+  max-width: 30vw;
+  margin: 2vh;
+}

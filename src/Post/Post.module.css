@@ -1,0 +1,25 @@
+.mainDiv {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  padding: 4vw;
+  color: #FFF;
+  font-size: 1.4rem;
+}
+
+.likesInfo {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  color: #ffd900;
+}
+
+.topicInfo {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.postImage {
+  max-width: 30vw;
+}

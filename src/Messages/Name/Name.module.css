@@ -1,0 +1,14 @@
+.name {
+  margin-bottom: 3vh;
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+
+.name:hover a {
+  color: #ffd900;
+}
+
+.ava {
+  height: 4vh;
+}

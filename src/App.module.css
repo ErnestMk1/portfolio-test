@@ -1,0 +1,17 @@
+.App {
+  box-sizing: border-box;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 2fr 8fr;
+  gap: 0;
+  grid-template-areas:
+  'header header'
+  'nav main_content';
+}
+
+.contentPage {
+  grid-area: main_content;
+  background-color: #7979f1;
+  min-height: 50vh;
+}
