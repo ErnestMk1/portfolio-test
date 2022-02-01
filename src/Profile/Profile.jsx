@@ -7,11 +7,14 @@ const Profile = (props) => {
   const postInput = React.createRef();
 
   const addPost = () => {
-    props.addPost();
+    props.dispatch({type: "ADD-POST"});
   };
 
   const onPostChange = () => {
-    props.updatePostText(postInput.current.value);
+    props.dispatch({
+      type: "UPDATE-POST-TEXT",
+      postMessage: postInput.current.value,
+    })
   };
 
   return (
