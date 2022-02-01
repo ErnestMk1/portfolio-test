@@ -64,24 +64,6 @@ const store = {
     return this._state;
   },
 
-  updatePostText(postMessage) {
-    this._state.newPostText = postMessage;
-    this._callSubscriber(this._state);
-  },
-
-  addPost() {
-    const newPost = {
-      id: 5,
-      message: this._state.newPostText,
-      likesInfo: '0',
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8kTnp3ZUx6MNsVhDbfsHRun5kVo5GVbCsWiI6JK0lTuSV6lG9dIvagZYB0bbjPtLkn0&usqp=CAU",
-    };
-
-    this._state.postsInfo.push(newPost);
-    this._state.newPostText = '';
-    this._callSubscriber(this._state);
-  },
-
   dispatch(action) {
     switch (action.type) {
       case 'ADD-POST':
