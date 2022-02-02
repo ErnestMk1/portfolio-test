@@ -1,20 +1,19 @@
 import st from './Profile.module.css';
 import MyPosts from '../MyPosts/MyPosts';
 import React from 'react';
+import {addPostActionCreator, updatePostTextActionCreator} from '../state';
 
 const Profile = (props) => {
 
   const postInput = React.createRef();
 
   const addPost = () => {
-    props.dispatch({type: "ADD-POST"});
+    props.dispatch(addPostActionCreator());
   };
 
   const onPostChange = () => {
-    props.dispatch({
-      type: "UPDATE-POST-TEXT",
-      postMessage: postInput.current.value,
-    })
+    let text = postInput.current.value;
+    props.dispatch(updatePostTextActionCreator(text));
   };
 
   return (

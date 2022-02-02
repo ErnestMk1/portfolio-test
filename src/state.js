@@ -1,3 +1,6 @@
+const ADD_POST = "ADD-POST";
+const UPDATE_POST_TEXT = "UPDATE-POST-TEXT";
+
 const store = {
   _callSubscriber() {
     console.log('there is no subscribers');
@@ -66,7 +69,7 @@ const store = {
 
   dispatch(action) {
     switch (action.type) {
-      case 'ADD-POST':
+      case ADD_POST:
         const newPost = {
           id: 5,
           message: this._state.newPostText,
@@ -78,7 +81,7 @@ const store = {
         this._state.newPostText = '';
         this._callSubscriber(this._state);
         break;
-      case 'UPDATE-POST-TEXT':
+      case UPDATE_POST_TEXT:
         this._state.newPostText = action.postMessage;
         this._callSubscriber(this._state);
         break;
@@ -87,6 +90,19 @@ const store = {
         break;
     }
   },
+};
+
+export const addPostActionCreator = () => {
+  return {
+    type: ADD_POST,
+  };
+};
+
+export const updatePostTextActionCreator = (text) => {
+  return {
+    type: UPDATE_POST_TEXT,
+    postMessage: text,
+  };
 };
 
 export default store;
