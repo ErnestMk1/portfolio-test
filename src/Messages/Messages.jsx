@@ -2,7 +2,7 @@ import st from './Messages.module.css';
 import MessageItem from './MessageItem/MessageItem';
 import Name from './Name/Name';
 import React from 'react';
-import { updateMessageTextAC, sendMessageCreator } from '../state';
+import { updateMessageTextAC, sendMessageCreator } from '../redux/dialogs-reducer';
 
 const Messages = (props) => {
   const namesArray = props.namesData.map((d) => {
@@ -21,8 +21,13 @@ const Messages = (props) => {
     )
   });
 
+  const textarea = React.createRef();
   const onButClick = () => {
-    props.dispatch(sendMessageCreator());
+    if (textarea.current.value.length > 0) {
+      props.dispatch(sendMessageCreator());
+    } else {
+      alert('You\'re dumb. Input smth');
+    }
   };
 
   const onMessageChange = (e) => {
@@ -45,6 +50,7 @@ const Messages = (props) => {
           id="inputMess"
           cols="30"
           rows="10"
+          ref={textarea}
           className={st.textarea}
           value={props.newMessageText}
           onChange={onMessageChange}

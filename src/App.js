@@ -16,15 +16,15 @@ const App = (props) => {
         <div className={st.contentPage}>
           <Routes>
             <Route path='/messages' element={<Messages
-              namesData={props.state.namesData}
-              messagesData={props.state.messagesData}
-              newMessageText={props.state.newMessageText}
+              namesData={props.state.dialogsPage.namesData}
+              messagesData={props.state.dialogsPage.messagesData}
+              newMessageText={props.state.dialogsPage.newMessageText}
               dispatch={props.dispatch}
             />}/>
               <Route path='/profile' element={<Profile
-                postsInfo={props.state.postsInfo}
+                postsInfo={props.state.postsPage.postsInfo}
                 dispatch={props.dispatch}
-                newPostText={props.state.newPostText}
+                newPostText={props.state.postsPage.newPostText}
               />}/>
             <Route path='/settings' element={<Settings/>}/>
             <Route path='/news' element={<News/>}/>
