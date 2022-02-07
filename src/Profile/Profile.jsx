@@ -4,15 +4,12 @@ import React from 'react';
 import {addPostActionCreator, updatePostTextActionCreator} from '../state';
 
 const Profile = (props) => {
-
-  const postInput = React.createRef();
-
   const addPost = () => {
     props.dispatch(addPostActionCreator());
   };
 
-  const onPostChange = () => {
-    let text = postInput.current.value;
+  const onPostChange = (e) => {
+    let text = e.target.value;
     props.dispatch(updatePostTextActionCreator(text));
   };
 
@@ -25,7 +22,6 @@ const Profile = (props) => {
           cols="30"
           rows="10"
           className={st.post_input}
-          ref={postInput}
           value={props.newPostText}
           onChange={onPostChange}
         ></textarea>

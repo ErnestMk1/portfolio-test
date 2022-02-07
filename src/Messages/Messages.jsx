@@ -2,6 +2,7 @@ import st from './Messages.module.css';
 import MessageItem from './MessageItem/MessageItem';
 import Name from './Name/Name';
 import React from 'react';
+import { updateMessageTextAC, sendMessageCreator } from '../state';
 
 const Messages = (props) => {
   const namesArray = props.namesData.map((d) => {
@@ -20,10 +21,13 @@ const Messages = (props) => {
     )
   });
 
-  const inputMessage = React.createRef();
+  const onButClick = () => {
+    props.dispatch(sendMessageCreator());
+  };
 
-  const onButtClick = () => {
-    alert(inputMessage.current.value);
+  const onMessageChange = (e) => {
+    let text = e.target.value;
+    props.dispatch(updateMessageTextAC(text))
   }
 
   return (
@@ -42,9 +46,11 @@ const Messages = (props) => {
           cols="30"
           rows="10"
           className={st.textarea}
-          ref={inputMessage}
+          value={props.newMessageText}
+          onChange={onMessageChange}
+          placeholder='Enter your message'
         ></textarea>
-        <button onClick={ onButtClick } className={st.sendButton}>Send</button>
+        <button onClick={ onButClick } className={st.sendButton}>Send</button>
       </div>
     </div>
   );

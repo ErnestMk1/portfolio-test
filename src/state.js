@@ -1,5 +1,7 @@
 const ADD_POST = "ADD-POST";
 const UPDATE_POST_TEXT = "UPDATE-POST-TEXT";
+const UPDATE_MESSAGE_TEXT = "UPDATE_MESSAGE_TEXT";
+const SEND_MESSAGE = "SEND_MESSAGE";
 
 const store = {
   _callSubscriber() {
@@ -53,10 +55,12 @@ const store = {
     messagesData: [
       {message: 'Hello, how r u?'},
       {message: 'Looser'},
-      {message: 'Shut up'}
+      {message: 'Shut up'},
     ],
 
     newPostText: "I'm here",
+
+    newMessageText: '',
   },
 
   subscriber(observer) {
@@ -85,6 +89,21 @@ const store = {
         this._state.newPostText = action.postMessage;
         this._callSubscriber(this._state);
         break;
+      case UPDATE_MESSAGE_TEXT:
+        this._state.newMessageText = action.dialogText;
+        this._callSubscriber(this._state);
+        break;
+      case SEND_MESSAGE:
+        const body = this._state.newMessageText;
+        this._state.newMessageText = '';
+        this._state.messagesData.push(
+          {
+            id: 6,
+            message: body,
+          }
+        );
+        this._callSubscriber(this._state);
+        break;
       default:
         console.log('just to make it default');
         break;
@@ -104,5 +123,14 @@ export const updatePostTextActionCreator = (text) => {
     postMessage: text,
   };
 };
+
+export const updateMessageTextAC = (text) => {
+  return {
+    type: UPDATE_MESSAGE_TEXT,
+    dialogText: text,
+  };
+};
+
+export const sendMessageCreator = () => ({type: SEND_MESSAGE});
 
 export default store;
