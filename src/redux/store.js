@@ -65,7 +65,7 @@ const store = {
     },
   },
 
-  subscriber(observer) {
+  subscribe(observer) {
     this._callSubscriber = observer;
   },
 
