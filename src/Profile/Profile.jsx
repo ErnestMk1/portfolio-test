@@ -1,13 +1,12 @@
 import st from './Profile.module.css';
 import MyPosts from '../MyPosts/MyPosts';
 import React from 'react';
-import {addPostActionCreator, updatePostTextActionCreator} from '../redux/posts-reducer';
 
 const Profile = (props) => {
   const textarea = React.createRef();
   const addPost = () => {
     if (textarea.current.value.length > 0) {
-      props.dispatch(addPostActionCreator());
+      props.addPost();
     } else {
       alert('input something');
     }
@@ -15,7 +14,7 @@ const Profile = (props) => {
 
   const onPostChange = (e) => {
     let text = e.target.value;
-    props.dispatch(updatePostTextActionCreator(text));
+    props.updateNewPostText(text);
   };
 
   return (

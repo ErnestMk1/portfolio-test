@@ -2,7 +2,6 @@ import st from './Messages.module.css';
 import MessageItem from './MessageItem/MessageItem';
 import Name from './Name/Name';
 import React from 'react';
-import { updateMessageTextAC, sendMessageCreator } from '../redux/dialogs-reducer';
 
 const Messages = (props) => {
   const namesArray = props.namesData.map((d) => {
@@ -24,7 +23,7 @@ const Messages = (props) => {
   const textarea = React.createRef();
   const onButClick = () => {
     if (textarea.current.value.length > 0) {
-      props.dispatch(sendMessageCreator());
+      props.btnClicked();
     } else {
       alert('You\'re dumb. Input smth');
     }
@@ -32,7 +31,7 @@ const Messages = (props) => {
 
   const onMessageChange = (e) => {
     let text = e.target.value;
-    props.dispatch(updateMessageTextAC(text))
+    props.msgChanged(text);
   }
 
   return (
