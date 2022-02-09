@@ -7,7 +7,7 @@ import Settings from './Settings/Settings';
 import News from './News/News';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-const App = (props) => {
+const App = () => {
   return (
     <BrowserRouter>
       <div className={st.App}>
@@ -15,14 +15,8 @@ const App = (props) => {
         <NavBar/>
         <div className={st.contentPage}>
           <Routes>
-            <Route path='/messages' element={<MessagesContainer
-              state={props.state}
-              dispatch={props.dispatch}
-            />}/>
-              <Route path='/profile' element={<ProfileContainer
-                state={props.state}
-                dispatch={props.dispatch}
-              />}/>
+            <Route path='/messages' element={<MessagesContainer />}/>
+              <Route path='/profile' element={<ProfileContainer />}/>
             <Route path='/settings' element={<Settings/>}/>
             <Route path='/news' element={<News/>}/>
           </Routes>
