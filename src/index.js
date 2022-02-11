@@ -6,22 +6,13 @@ import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 
-const rerenderEntireTree = () => {
-  ReactDOM.render(
-    <React.StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
-};
-
-rerenderEntireTree(store.getState());
-
-store.subscribe(() => {
-  const state = store.getState();
-  rerenderEntireTree(state);
-});
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 reportWebVitals();
