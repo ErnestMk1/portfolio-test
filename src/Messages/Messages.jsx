@@ -4,6 +4,7 @@ import Name from './Name/Name';
 import React from 'react';
 
 const Messages = (props) => {
+  debugger;
   const namesArray = props.namesData.map((d) => {
     return (
       <Name
