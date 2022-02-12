@@ -5,6 +5,7 @@ const MyPosts = (props) => {
   let postsArray = props.postsInfo.map((a) => {
     return (
       <Post
+        key={a.id}
         img={a.img}
         likesInfo={a.likesInfo}
         message={a.message}

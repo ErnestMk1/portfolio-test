@@ -4,20 +4,20 @@ import Name from './Name/Name';
 import React from 'react';
 
 const Messages = (props) => {
-  debugger;
   const namesArray = props.namesData.map((d) => {
     return (
       <Name
         img={d.img}
         name={d.name}
         id={d.id}
+        key={d.id}
       />
     )
   });
 
   const messagesArray = props.messagesData.map((m) => {
     return (
-      <MessageItem message={m.message}/>
+      <MessageItem message={m.message} key={m.id} />
     )
   });
 
