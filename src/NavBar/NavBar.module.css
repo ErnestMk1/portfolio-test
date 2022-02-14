@@ -2,6 +2,7 @@
   grid-area: nav;
   display: flex;
   background-color: #ffd900;
+  justify-content: center;
 }
 
 .navList {

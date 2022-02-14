@@ -23,6 +23,12 @@ const NavBar = () => {
         </li>
         <li className={st.listElement}>
           <NavLink
+            to='/users'
+            style={({isActive}) => isActive ? activeStyle : undefined}
+          >Users</NavLink>
+        </li>
+        <li className={st.listElement}>
+          <NavLink
             to='/settings'
             style={({isActive}) => isActive ? activeStyle : undefined}
           >Settings</NavLink>

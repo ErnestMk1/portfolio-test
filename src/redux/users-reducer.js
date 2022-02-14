@@ -4,45 +4,53 @@ const SET_USERS = 'SET_USERS';
 
 const initialState = {
   users: [
-  //   {
-  //     name: 'Angleina',
-  //     location: {
-  //       city: 'Izmail',
-  //       country: 'Ukraine',
-  //     },
-  //     id: 1,
-  //     followed: true,
-  //   },
+    {
+      name: 'Angleina',
+      location: {
+        city: 'Izmail',
+        country: 'Ukraine',
+      },
+      id: 1,
+      followed: true,
+      message: 'I\'ll never be scared of devil',
+      photoUrl: 'https://en.meming.world/images/en/b/bc/Mike_Wazowski-Sulley_Face_Swap.jpg',
+    },
 
-  //   {
-  //     name: 'Nick',
-  //     location: {
-  //       city: 'Sacramento',
-  //       country: 'USA',
-  //     },
-  //     id: 2,
-  //     followed: true,
-  //   },
+    {
+      name: 'Nick',
+      location: {
+        city: 'Sacramento',
+        country: 'USA',
+      },
+      id: 2,
+      followed: true,
+      message: 'I\'ll never be scared of devil',
+      photoUrl: 'https://en.meming.world/images/en/b/bc/Mike_Wazowski-Sulley_Face_Swap.jpg',
+    },
 
-  //   {
-  //     name: 'Anton',
-  //     location: {
-  //       city: 'Izmail',
-  //       country: 'Ukraine',
-  //     },
-  //     id: 3,
-  //     followed: false,
-  //   },
+    {
+      name: 'Anton',
+      location: {
+        city: 'Izmail',
+        country: 'Ukraine',
+      },
+      id: 3,
+      followed: false,
+      message: 'I\'ll never be scared of devil',
+      photoUrl: 'https://en.meming.world/images/en/b/bc/Mike_Wazowski-Sulley_Face_Swap.jpg',
+    },
 
-  //   {
-  //     name: 'Kate',
-  //     location: {
-  //       city: 'Sacramento',
-  //       country: 'USA',
-  //     },
-  //     id: 4,
-  //     followed: false,
-  //   },
+    {
+      name: 'Kate',
+      location: {
+        city: 'Sacramento',
+        country: 'USA',
+      },
+      id: 4,
+      followed: false,
+      message: 'I\'ll never be scared of devil',
+      photoUrl: 'https://en.meming.world/images/en/b/bc/Mike_Wazowski-Sulley_Face_Swap.jpg',
+    },
   ],
 };
 
