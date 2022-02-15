@@ -6,3 +6,4 @@ it's created for me in the future. Just to be able to evaluate my progress. Hope
 I create this SPA while learning course
 
 current result: https://ernestmk1.github.io/firstReactApp/
+# practisingReact
