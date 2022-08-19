@@ -66,7 +66,7 @@ const NavBar = () => {
                 <img alt="" src={navIcon3} />
               </a>
             </div>
-            <button></button>
+            <button>Let's Connect</button>
           </span>
         </Navbar.Collapse>
       </Container>
@@ -75,3 +75,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
+/* https://getbootstrap.com/docs/5.2/components/navbar/? - more about NavBar in Bootstrap */
