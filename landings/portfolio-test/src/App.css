@@ -16,6 +16,7 @@
 }
 
 /* Default CSS */
+
 * {
   margin: 0;
   padding: 0;
@@ -54,7 +55,7 @@ nav.navbar {
 }
 
 nav.navbar.scrolled {
-  padding: 0px 0;
+  padding: 0;
   background-color: #121212;
 }
 
@@ -65,7 +66,7 @@ nav.navbar a.navbar-brand {
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
   padding: 0 25px;
   font-size: 18px;
   opacity: 0.75;
@@ -94,7 +95,7 @@ span.navbar-text {
 .social-icon a {
   width: 42px;
   height: 42px;
-  background: rgba(217, 217, 217, 0.1);
+  background: rgb(29, 29, 29);
   display: inline-flex;
   border-radius: 50%;
   margin-right: 6px;
@@ -296,61 +297,60 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
   position: absolute;
   width: 50px;
-  height: 50px;
-  -webkit-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-  -moz-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-  -o-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  height: 35px;
   animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
 }
 
-@-webkit-keyframes moveX {
-  from { left: 0; } to { left: 530px; }
-}
-@-moz-keyframes moveX {
-  from { left: 0; } to { left: 530px; }
-}
-@-o-keyframes moveX {
-  from { left: 0; } to { left: 530px; }
-}
 @keyframes moveX {
-  from { left: 0; } to { left: 530px; }
+  from { left: 0; } to { left: 450px; }
 }
 
-@-webkit-keyframes moveY {
-  from { top: 0; } to { top: 330px; }
-}
-@-moz-keyframes moveY {
-  from { top: 0; } to { top: 330px; }
-}
-@-o-keyframes moveY {
-  from { top: 0; } to { top: 330px; }
-}
 @keyframes moveY {
-  from { top: 0; } to { top: 330px; }
+  from { top: -5.5px; } to { top: 270px; }
 }
-
-/* .banner img {
-  width: 10rem;
-  animation: circle 3s linear infinite;
-}
-
-@keyframes circle {
-  0% {
-    transform: translate(-20px, 0);
-  }
-  33% {
-    transform: translate(0, 20px);
-  }
-  66% {
-    transform: translate(-20px, 0);
-  }
-  100% {
-    transform: translate(20px, 0);
-  }
-} */
 
 .txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
+  border-right: 0.05em solid rgb(255, 255, 255);
+}
+
+/* Skills */
+
+.skill {
+  padding: 0 0 6vh 0;
+  position: relative;
+  margin-top: 6vh;
+}
+
+.skill-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+}
+
+.skill h5 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.skill p {
+  color: #b8b8b8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+}
+
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.skill-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
 }
 
 /* App' General */
