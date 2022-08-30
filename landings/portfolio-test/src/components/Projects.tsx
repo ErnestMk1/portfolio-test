@@ -3,6 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import projImg1 from '../assets/img/project-img1.png';
 import projImg2 from '../assets/img/project-img2.png';
 import projImg3 from '../assets/img/project-img3.png';
+import ProjectCard from "./ProjectCard";
+import colorSharp2 from '../assets/img/color-sharp2.png';
 
 const Projects = () => {
   const projects = [
@@ -39,7 +41,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col>
@@ -48,8 +50,9 @@ const Projects = () => {
 
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav
-                activeKey="/home"
                 onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+                className="nav-pills mb-5 justify-content-center align-items-center"
+                id="pills-tab"
               >
                 <Nav.Item>
                   <Nav.Link eventKey="first">Tab One</Nav.Link>
@@ -68,7 +71,7 @@ const Projects = () => {
                   <Row>
                     {projects.map((project, index) => {
                       return (
-                        <div id={index.toString()}>{project.title}</div>
+                        <ProjectCard key={index} {...project} />
                       )
                     })}
                   </Row>
@@ -80,6 +83,11 @@ const Projects = () => {
           </Col>
         </Row>
       </Container>
+      <img
+        className="background-image-right"
+        src={colorSharp2}
+        alt="background gradient"
+      />
     </section>
   );
 };
