@@ -87,3 +87,37 @@
 .txt-rotate > .wrap {
   border-right: 0.05em solid rgb(255, 255, 255);
 }
+
+@media only screen and (max-width: 750px) {
+  .animate__animated {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner h1 {
+    font-size: 2em;
+  }
+
+  .banner .header-img-div {
+    display: none;
+  }
+
+  .banner img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .banner h1 {
+    font-size: 1.8em;
+  }
+
+  .banner .header-img-div {
+    display: none;
+  }
+
+  .banner img {
+    display: none;
+  }
+}

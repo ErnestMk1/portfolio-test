@@ -26,7 +26,11 @@ const NavBar = () => {
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} alt="logo" />
+          <img
+            src={logo}
+            alt="logo img"
+            className="logo_img"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -81,6 +85,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-
-/* https://getbootstrap.com/docs/5.2/components/navbar/? - more about NavBar in Bootstrap */

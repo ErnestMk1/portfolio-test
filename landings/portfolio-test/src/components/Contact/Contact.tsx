@@ -51,8 +51,8 @@ const Contact = () => {
 
   return (
     <section className='contact' id="connect">
-      <Container>
-        <Row className="align-items-center">
+      <Container className="contact-container">
+        <Row className="align-items-center el_position">
           <Col md={6}>
             <img src={contactImg} alt="contact us" />
           </Col>
@@ -95,6 +95,7 @@ const Contact = () => {
                 <Col sm={6} className="px-1">
                   <textarea
                     rows={6}
+                    className="contact_msg-area"
                     value={formDetails.message}
                     onChange={(e) => onFormUpdate('message', e.target.value)}
                     placeholder="Message"

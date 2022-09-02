@@ -66,7 +66,7 @@
   background: transparent;
   border: 0;
   padding-top: 2vh;
-  padding-left: 1vh;
+  padding-left: 2vw;
   border-radius: 20px;
 }
 
@@ -90,4 +90,46 @@
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 750px) {
+  .new-email-bx {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .newsletter-bx {
+    text-align: center;
+  }
+
+  .new-email-bx textarea {
+    height: 12vh;
+    border: 1px solid #4A2FBD;
+    margin: 2vh 0;
+  }
+
+  .new-email-bx::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .new-email-bx {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .newsletter-bx {
+    text-align: center;
+  }
+
+  .new-email-bx textarea {
+    height: 15vh;
+    border: 1px solid #4A2FBD;
+    margin: 2vh 0;
+  }
+
+  .new-email-bx::before {
+    display: none;
+  }
 }

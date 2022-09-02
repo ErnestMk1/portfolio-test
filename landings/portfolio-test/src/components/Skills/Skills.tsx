@@ -32,7 +32,7 @@ const Skills = () => {
         <Row>
           <Col>
             <div className="skill-box">
-              <h2>Skills</h2>
+              <h2 className="skills_caption">Skills</h2>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, sint!
               </p>

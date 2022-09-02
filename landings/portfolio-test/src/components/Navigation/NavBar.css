@@ -10,6 +10,7 @@ nav.navbar {
 nav.navbar.scrolled {
   padding: 0;
   background-color: #121212;
+  height: 10vh;
 }
 
 nav.navbar a.navbar-brand {
@@ -162,4 +163,43 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
+}
+
+@media screen and (max-width: 750px) {
+  .container .logo_img {
+    margin-top: 1vh;
+    height: 4vh;
+  }
+
+  nav.navbar {
+    justify-content: center;
+  }
+
+  nav .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90.21deg, rgba(173, 60, 128, 0.5) -5.91%, rgba(81, 56, 194, 0.5));
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .me-auto {
+    width: 90%;
+    align-items: center;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1000px) {
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90.21deg, rgba(173, 60, 128, 0.5) -5.91%, rgba(81, 56, 194, 0.5));
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .me-auto {
+    width: 90%;
+    align-items: center;
+  }
 }
