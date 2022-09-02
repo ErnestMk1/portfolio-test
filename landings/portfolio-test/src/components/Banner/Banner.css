@@ -1,0 +1,89 @@
+.banner {
+  margin-top: 0;
+  padding: 260px 0 100px 0;
+  background-image: url('../../assets/img/banner-bg.png');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(110, 36, 81, 0.5) -5.91%, rgba(74, 47, 189, 0.5));
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.banner h1 {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.banner p {
+  color: #b8b8b8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+
+.banner button {
+  background-color: #121212;
+  color: #FFF;
+  padding: 0.5em;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+
+.banner button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+
+.banner button:hover svg {
+  margin-left: 25px;
+}
+
+.banner .header-img-div {
+  margin: 0 auto;
+  width: 500px;
+  height: 300px;
+  background: linear-gradient(90.21deg, rgba(173, 60, 128, 0.5) -5.91%, rgba(81, 56, 194, 0.5));
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+.banner img {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 35px;
+  animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+}
+
+@keyframes moveX {
+  from { left: 0; } to { left: 450px; }
+}
+
+@keyframes moveY {
+  from { top: -5.5px; } to { top: 270px; }
+}
+
+.txt-rotate > .wrap {
+  border-right: 0.05em solid rgb(255, 255, 255);
+}

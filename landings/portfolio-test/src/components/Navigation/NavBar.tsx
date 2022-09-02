@@ -3,10 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import logo from '../assets/img/logo.svg';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import logo from '../../assets/img/logo.svg';
+import navIcon1 from '../../assets/img/nav-icon1.svg';
+import navIcon2 from '../../assets/img/nav-icon2.svg';
+import navIcon3 from '../../assets/img/nav-icon3.svg';
+import './NavBar.css';
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -66,7 +67,12 @@ const NavBar = () => {
                 <img alt="" src={navIcon3} />
               </a>
             </div>
-            <button>Let's Connect</button>
+            <Nav.Link
+              href="#connect"
+              className='button_link'
+            >
+              Let's Connect
+            </Nav.Link>
           </span>
         </Navbar.Collapse>
       </Container>
