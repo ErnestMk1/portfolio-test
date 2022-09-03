@@ -111,9 +111,23 @@
   .new-email-bx::before {
     display: none;
   }
+
+  .text-center {
+    margin-top: 1.5vh;
+  }
+
+  .logo_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .new-email-bx textarea {
+    width: 70vw;
+  }
 }
 
-@media screen and (max-width: 1000px) {
+@media (min-width: 750px) and (max-width: 1000px) {
   .new-email-bx {
     display: flex;
     flex-direction: column;

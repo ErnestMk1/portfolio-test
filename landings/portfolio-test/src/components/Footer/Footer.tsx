@@ -12,7 +12,7 @@ const Footer = () => {
       <Container>
         <Row className="align-item-center">
           <MailchimpForm />
-          <Col sm={6}>
+          <Col className="logo_block" sm={6}>
             <img
               src={logo}
               alt='footer logo'

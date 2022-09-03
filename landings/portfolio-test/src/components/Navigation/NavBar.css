@@ -175,17 +175,34 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     justify-content: center;
   }
 
-  nav .navbar-collapse {
+  .navbar-text {
     display: flex;
     flex-direction: column;
+    gap: 3vh;
+  }
+
+  nav .navbar-collapse {
+    display: flex;
+    height: 28vh;
+    flex-direction: column;
     align-items: center;
-    background: linear-gradient(90.21deg, rgba(173, 60, 128, 0.5) -5.91%, rgba(81, 56, 194, 0.5));
+    justify-content: center;
+    background: linear-gradient(90.21deg, rgba(173, 60, 128, 0.9) -5.91%, rgba(81, 56, 194, 0.9));
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   .me-auto {
     width: 90%;
     align-items: center;
+    gap: 1vh;
+  }
+
+  nav.navbar .button_link {
+    background: linear-gradient(90.21deg, rgba(173, 60, 128, 1) -5.91%, rgba(81, 56, 194, 1));
+  }
+
+  nav.navbar .button_link:hover {
+    border: solid 1.5px #000;
   }
 }
 

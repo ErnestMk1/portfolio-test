@@ -51,7 +51,7 @@ const NewsLetter = ({ onValidated, status, message }) => {
                   value={email}
                   type='email'
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder='Enter your email pls'
+                  placeholder='Enter your email'
                 />
                 <button type='submit'>Submit</button>
               </div>
