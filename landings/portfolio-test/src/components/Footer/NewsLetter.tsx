@@ -1,18 +1,26 @@
 import { Alert, Col, Row } from 'react-bootstrap';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-// type EmailFormFields = string | any;
+type messageType = string | Error | null;
 
-// type NewsLetterParam = {
-//   onValidated: (formData: EmailFormFields) => void
-//   status: string | null;
-//   message: string | Error | null;
-// };
+type NewsLetterParams = {
+  onValidated: (a: any) => void
+  status: "success" | "sending" | "error" | null;
+  message: messageType;
+};
 
-const NewsLetter = ({ onValidated, status, message }) => {
+const typeChecking = (msg: messageType) => {
+  if (msg instanceof Error) {
+    return msg.toString();
+  } else {
+    return msg;
+  }
+};
+
+const NewsLetter = ({ onValidated, status, message }: NewsLetterParams) => {
   const [email, setEmail] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     email &&
@@ -41,15 +49,14 @@ const NewsLetter = ({ onValidated, status, message }) => {
           >
             <h3>Subscribe To Our Newsletter</h3>
             {status === 'sending' && <Alert>Sending...</Alert>}
-            {status === 'error' && <Alert variant='danger'>{message}</Alert>}
-            {status === 'success' && <Alert variant='success'>{message}</Alert>}
+            {status === 'error' && <Alert variant='danger'>{typeChecking(message)}</Alert>}
+            {status === 'success' && <Alert variant='success'>{typeChecking(message)}</Alert>}
           </Col>
           <Col md={6} xl={7}>
             <form onSubmit={handleSubmit}>
               <div className="new-email-bx">
                 <textarea
                   value={email}
-                  type='email'
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder='Enter your email'
                 />
