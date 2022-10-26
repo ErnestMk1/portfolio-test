@@ -92,7 +92,7 @@ const Contact = () => {
                     placeholder="Email"
                   />
                 </Col>
-                <Col sm={6} className="px-1">
+                <Col sm={6} className="px-1 text_btn_box">
                   <textarea
                     rows={6}
                     className="contact_msg-area"

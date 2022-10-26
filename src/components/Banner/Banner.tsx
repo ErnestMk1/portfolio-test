@@ -13,6 +13,7 @@ const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
+
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
@@ -52,7 +53,7 @@ const Banner = () => {
           >
             <TrackVisibility>
             {({ isVisible }) =>
-              <div className={isVisible ? 'animate__animated animate__pulse' : ''}>
+              <div className={isVisible ? 'animate__animated animate__pulse banner_box' : 'banner_box'}>
                 <span className="tagline">
                   Welcome to my Portfolio
                 </span>

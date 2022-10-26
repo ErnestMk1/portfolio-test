@@ -89,14 +89,15 @@
 }
 
 @media only screen and (max-width: 750px) {
-  .animate__animated {
+  .banner_box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .banner h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   .banner .header-img-div {
@@ -105,6 +106,16 @@
 
   .banner img {
     display: none;
+  }
+}
+
+@media (min-width: 310px) and (max-width: 370px) {
+  .banner {
+    height: 100%;
+  }
+
+  .banner h1 {
+    font-size: 1.5em;
   }
 }
 
