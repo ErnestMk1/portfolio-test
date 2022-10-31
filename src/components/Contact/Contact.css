@@ -61,7 +61,7 @@
   width: 100%;
 }
 
-@media (min-width: 310px) and (max-width: 370px) {
+@media (min-width: 310px) and (max-width: 450px) {
   .text_btn_box {
     display: flex;
     flex-direction: column;

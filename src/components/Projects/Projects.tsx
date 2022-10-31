@@ -25,21 +25,6 @@ const Projects = () => {
       description: 'Design & Development',
       imgUrl: projImg3,
     },
-    {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg1,
-    },
-    {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg2,
-    },
-    {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg3,
-    }
   ];
 
   return (
@@ -58,7 +43,6 @@ const Projects = () => {
 
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav
-                onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
                 className="nav-pills mb-5 justify-content-center align-items-center"
                 id="pills-tab"
               >
